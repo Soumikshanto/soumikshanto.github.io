@@ -1,109 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soumik Shanto Mondol</title>
-  <meta name="description" content="Personal academic website and research portfolio of Soumik Shanto Mondol, PhD student at Concordia University." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9f5">
+  <meta name="description" content="Academic portfolio of Soumik Shanto Mondol, PhD student in Electrical and Computer Engineering at Concordia University and member of the IMPACT Lab. Publications in quantitative ultrasound and medical imaging.">
+  <meta name="author" content="Soumik Shanto Mondol">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://soumikshanto.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/profile.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Soumik Shanto Mondol | PhD Student, Concordia University">
+  <meta property="og:description" content="Research in quantitative ultrasound, biomedical signal processing and medical imaging. Publications, academic background and contact details.">
+  <meta property="og:url" content="https://soumikshanto.github.io/">
+  <meta property="og:image" content="https://soumikshanto.github.io/assets/profile.jpg">
+  <meta name="twitter:card" content="summary">
+  <title>Soumik Shanto Mondol | Academic Portfolio</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Soumik Shanto Mondol",
+    "url":"https://soumikshanto.github.io/",
+    "image":"https://soumikshanto.github.io/assets/profile.jpg",
+    "jobTitle":"PhD Student",
+    "email":"soumikshanto.mondol@mail.concordia.ca",
+    "affiliation":{"@type":"CollegeOrUniversity","name":"Concordia University"},
+    "alumniOf":{"@type":"CollegeOrUniversity","name":"Bangladesh University of Engineering and Technology"},
+    "knowsAbout":["Quantitative Ultrasound","Medical Imaging","Biomedical Signal Processing","Inverse Problems","Machine Learning"],
+    "sameAs":[
+      "https://scholar.google.com/citations?user=vSpM9DMAAAAJ&hl=en",
+      "https://www.linkedin.com/in/soumik-shanto-mondol/",
+      "https://github.com/Soumikshanto"
+    ]
+  }
+  </script>
+  <script>
+    /* Apply theme before page renders to prevent a bright flash on dark-mode visits. */
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem('soumik-site-theme'); } catch (error) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
+    })();
+  </script>
+  <script src="js/content.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
-
-<header class="navbar">
-  <div class="logo">Soumik Shanto Mondol</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#updates">Updates</a>
-    <a href="#contact">Contact</a>
-    <a class="btn" href="cv/Soumik_Shanto_Mondol_CV.pdf">CV</a>
-  </nav>
-</header>
-
-<section id="home" class="hero">
-  <div>
-    <p class="tagline">PhD Student • Medical Imaging • Quantitative Ultrasound</p>
-    <h1>Soumik Shanto Mondol</h1>
-    <p class="intro">
-      I am a PhD student in Electrical and Computer Engineering at Concordia University,
-      working on quantitative ultrasound, biomedical signal processing, optimization,
-      and machine learning for medical imaging.
-    </p>
-    <div class="hero-buttons">
-      <a href="#publications" class="primary">View Publications</a>
-      <a href="#contact" class="secondary">Contact Me</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" id="top">
+    <div class="container header-row">
+      <a class="brand" href="#home" aria-label="Soumik Shanto Mondol — Home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-copy"><strong>Soumik Shanto Mondol</strong><small>Academic Portfolio</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#journey">Academic path</a>
+        <a href="#news">Updates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Switch color theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.7 13.1A9 9 0 0 1 10.9 3.3 9 9 0 1 0 20.7 13.1Z"/></svg>
+        </button>
+        <a class="header-cv" href="assets/Soumik_Shanto_Mondol_CV.pdf" target="_blank" rel="noopener noreferrer">CV <span aria-hidden="true">↗</span></a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </div>
-</section>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation" hidden>
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#journey">Academic path</a>
+      <a href="#news">Updates</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Soumik_Shanto_Mondol_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV ↗</a>
+    </nav>
+  </header>
 
-<section id="about" class="section">
-  <h2>About</h2>
-  <p>
-    I am currently pursuing my PhD at Concordia University in the IMPACT Lab.
-    My research interests include quantitative ultrasound, attenuation estimation,
-    inverse problems, optimization, and deep learning for biomedical imaging.
-  </p>
-</section>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-background" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> PhD STUDENT · CONCORDIA UNIVERSITY</div>
+          <h1 id="hero-heading">Soumik Shanto <span>Mondol<span class="period">.</span></span></h1>
+          <p class="hero-role">Medical Imaging <span aria-hidden="true">/</span> Quantitative Ultrasound</p>
+          <p class="hero-description">I am a PhD student in Electrical and Computer Engineering at Concordia University, Montréal, and a member of the IMPACT Lab under the supervision of Prof. Hassan Rivaz.</p>
+          <div class="hero-cta">
+            <a class="button button-primary" href="#publications">Explore my publications <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="assets/Soumik_Shanto_Mondol_CV.pdf" target="_blank" rel="noopener noreferrer">View CV <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-links" aria-label="Professional profiles">
+            <a href="https://scholar.google.com/citations?user=vSpM9DMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/soumik-shanto-mondol/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/Soumikshanto" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-image-area">
+          <div class="photo-decoration photo-decoration-one" aria-hidden="true"></div>
+          <div class="photo-decoration photo-decoration-two" aria-hidden="true"></div>
+          <figure class="photo-frame">
+            <img src="assets/profile.jpg" alt="Portrait of Soumik Shanto Mondol" width="947" height="960" decoding="async" fetchpriority="high">
+            <figcaption><span>SOUMIK SHANTO MONDOL</span><span>Montréal, Canada</span></figcaption>
+          </figure>
+          <div class="image-stamp" aria-hidden="true"><span class="stamp-star">✳</span><span>CONCORDIA<br>UNIVERSITY</span></div>
+        </div>
+      </div>
+      <div class="container hero-foot"><span>ACADEMIC PORTFOLIO</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span></div>
+    </section>
 
-<section class="section">
-  <h2>Research Interests</h2>
-  <div class="cards">
-    <div class="card">Quantitative Ultrasound</div>
-    <div class="card">Medical Imaging</div>
-    <div class="card">Optimization</div>
-    <div class="card">Deep Learning</div>
-  </div>
-</section>
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container section-grid">
+        <div class="section-label"><span class="index">01 / ABOUT</span><h2 id="about-heading">A little about <em>me.</em></h2></div>
+        <div class="section-body">
+          <p class="statement">My academic interests lie at the intersection of <strong>ultrasound imaging, signal processing, mathematical optimization,</strong> and <strong>machine learning.</strong></p>
+          <p>I am pursuing my PhD in Electrical and Computer Engineering at <a href="https://www.concordia.ca/" target="_blank" rel="noopener noreferrer">Concordia University</a>, where I am part of the <strong>IMPACT Lab</strong> led by <a href="https://www.concordia.ca/faculty/hassan-rivaz.html" target="_blank" rel="noopener noreferrer">Prof. Hassan Rivaz</a>. My previous research at BUET focused on multimodal breast-ultrasound analysis and explainable AI.</p>
+          <p>This website shares my <strong>published research, completed contributions,</strong> and academic milestones. It is updated as new work becomes public.</p>
+          <div class="interest-list" aria-label="Research interests">
+            <span>Quantitative Ultrasound</span>
+            <span>Medical Imaging</span>
+            <span>Biomedical Signal Processing</span>
+            <span>Inverse Problems</span>
+            <span>Explainable AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="publications" class="section">
-  <h2>Publications</h2>
+    <section class="section publications-section" id="publications" aria-labelledby="publications-heading">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="index">02 / SELECTED WORK</span><h2 id="publications-heading">Publications <em>&amp; presentations.</em></h2></div>
+          <p>Peer-reviewed research and publicly presented work. Follow the links for the original records.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filter research outputs">
+          <button class="filter is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+          <button class="filter" type="button" data-filter="paper" aria-pressed="false">Papers</button>
+          <button class="filter" type="button" data-filter="presentation" aria-pressed="false">Presentations</button>
+        </div>
+        <div class="publication-list" id="publicationsList" aria-live="polite"></div>
+        <noscript>
+          <p class="noscript-note">Selected works: <a href="https://doi.org/10.1088/1361-6560/adf9b5">2025 Physics in Medicine &amp; Biology paper</a>; <a href="https://epapers2.org/ius2026/ESR/paper_details.php?paper_id=8383">2026 IEEE IUS QUASOS poster</a>; <a href="https://doi.org/10.1109/ICCIT57492.2022.10055224">2022 IEEE ICCIT paper</a>.</p>
+        </noscript>
+        <div class="after-publications"><span>Complete publication record</span><a href="https://scholar.google.com/citations?user=vSpM9DMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">View Google Scholar <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
 
-  <div class="publication">
-    <h3>Physics in Medicine & Biology</h3>
-    <p>
-      Journal publication in quantitative ultrasound / biomedical imaging.
-      Full details will be updated soon.
-    </p>
-  </div>
+    <section class="section path-section" id="journey" aria-labelledby="journey-heading">
+      <div class="container">
+        <div class="section-head"><div><span class="index">03 / ACADEMIC PATH</span><h2 id="journey-heading">Experience <em>&amp; education.</em></h2></div><p>My academic path, from electrical engineering to medical imaging research.</p></div>
+        <div class="path-columns">
+          <div class="path-column">
+            <h3><span class="path-heading-symbol" aria-hidden="true">◌</span> Research experience</h3>
+            <div class="path-timeline">
+              <article class="path-item"><span class="path-time">2026 — Present</span><h4>Doctoral Researcher</h4><p class="path-affiliation">IMPACT Lab · Concordia University</p><p>Doctoral research in quantitative ultrasound and medical imaging. Presented work on ultrasound attenuation estimation at IEEE IUS 2026.</p></article>
+              <article class="path-item"><span class="path-time">2024 — 2025</span><h4>Research Assistant</h4><p class="path-affiliation">Bangladesh University of Engineering and Technology (BUET)</p><p>Contributed to published work on multimodal breast-ultrasound analysis using cross-attention learning and explainable AI.</p></article>
+            </div>
+          </div>
+          <div class="path-column">
+            <h3><span class="path-heading-symbol" aria-hidden="true">◌</span> Education</h3>
+            <div class="path-timeline">
+              <article class="path-item"><span class="path-time">May 2026 — Present</span><h4>PhD · Electrical and Computer Engineering</h4><p class="path-affiliation">Concordia University, Montréal</p><p>Supervisor: Prof. Hassan Rivaz · IMPACT Lab</p></article>
+              <article class="path-item"><span class="path-time">2019 — 2024</span><h4>BSc · Electrical and Electronic Engineering</h4><p class="path-affiliation">BUET, Dhaka</p><p>Major in Communication and Signal Processing. Undergraduate thesis in multimodal ultrasound-based breast-lesion analysis.</p></article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="publication">
-    <h3>Conference Publications</h3>
-    <p>
-      IEEE conference publication and upcoming research presentations will be listed here.
-    </p>
-  </div>
-</section>
+    <section class="section updates-section" id="news" aria-labelledby="news-heading">
+      <div class="container section-grid">
+        <div class="section-label"><span class="index">04 / NOTEBOOK</span><h2 id="news-heading">Recent <em>updates.</em></h2><p class="section-aside">A few public milestones along the way.</p></div>
+        <div class="updates-list" id="updatesList"></div>
+      </div>
+    </section>
 
-<section id="updates" class="section">
-  <h2>Updates</h2>
-  <div class="timeline">
-    <div>
-      <strong>2026</strong>
-      <p>Started PhD in Electrical and Computer Engineering at Concordia University.</p>
-    </div>
-    <div>
-      <strong>2026</strong>
-      <p>Working on quantitative ultrasound research at IMPACT Lab.</p>
-    </div>
-    <div>
-      <strong>2026</strong>
-      <p>Received first citation for my research work.</p>
-    </div>
-  </div>
-</section>
+    <section class="section honors-section" id="honors" aria-labelledby="honors-heading">
+      <div class="container section-grid">
+        <div class="section-label"><span class="index">05 / RECOGNITION</span><h2 id="honors-heading">Honors <em>&amp; awards.</em></h2></div>
+        <div class="honors-grid" id="awardsList"></div>
+      </div>
+    </section>
 
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>Email: soumikshantomondol26@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/Soumikshanto">github.com/Soumikshanto</a></p>
-  <p>Location: Montreal, Canada</p>
-</section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-layout">
+        <div class="contact-intro"><span class="index">06 / CONTACT</span><h2 id="contact-heading">Let's stay <em>connected.</em></h2><p>For academic correspondence and research-related inquiries, the best way to reach me is by email.</p><a class="button button-contact" href="mailto:soumikshanto.mondol@mail.concordia.ca">Send an email <span aria-hidden="true">↗</span></a></div>
+        <div class="contact-information">
+          <div class="contact-line"><span>EMAIL</span><a href="mailto:soumikshanto.mondol@mail.concordia.ca">soumikshanto.mondol@mail.concordia.ca <span aria-hidden="true">↗</span></a></div>
+          <div class="contact-line"><span>OFFICE</span><p>Room EV 10.105 (10th floor)<br>Engineering, Computer Science and Visual Arts Integrated Complex<br>1515 Ste-Catherine St. W., Montréal, Québec, Canada</p></div>
+          <div class="contact-line"><span>ACADEMIC &amp; SOCIAL</span><div class="contact-social"><a href="https://scholar.google.com/citations?user=vSpM9DMAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://www.linkedin.com/in/soumik-shanto-mondol/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/Soumikshanto" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2026 Soumik Shanto Mondol. Built with GitHub Pages.</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer class="site-footer"><div class="container footer-row"><span>© <span id="currentYear">2026</span> Soumik Shanto Mondol.</span><span>Made with care · Hosted on GitHub Pages</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>
